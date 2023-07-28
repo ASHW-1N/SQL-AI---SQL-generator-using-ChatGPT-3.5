@@ -13,17 +13,29 @@ export default function App() {
   };
 
   const generateQuery = async () => {
-    const response = await fetch("http://localhost:3002/generate", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ queryDescription: userPrompt }),
-    });
-
-    const data = await response.json();
-    return data.sqlQuery.trim();
+    try {
+      const response = await fetch("http://localhost:3002/generate", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ queryDescription: userPrompt }),
+      });
+  
+      // Check if the response is ok
+      if (!response.ok) {
+        console.error('Server responded with status', response.status);
+        return '';
+      }
+  
+      const data = await response.json();
+      return data.sqlQuery.trim();
+    } catch (error) {
+      console.error('Error fetching from server:', error);
+      return '';
+    }
   };
+  
 
   return (
     <main className={styles.main}>
