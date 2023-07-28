@@ -34,7 +34,7 @@ To start the server, navigate to the server folder and run:
 npm start
 ```
 
-sed Technologies
+Used Technologies
 This application's frontend is developed with React, while the backend utilizes Node.js and Express."
 
 
