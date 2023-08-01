@@ -1,7 +1,7 @@
 # SQL-AI---SQL-generator-using-ChatGPT-3.5
 SQL generator using AI , a Full Stack Project using react.js , express.js and node.js 
 
-# Generate SQL queries from Natural Language ussing OpenAI 
+# Generate SQL queries from Natural Language using OpenAI 
 This application is a comprehensive solution designed to translate natural language English into SQL queries, leveraging OpenAI's GPT-3.5 model and text completion API. It consists of both a client-side and a server-side, each with their individual npm packages.
 
 You can find the step-by-step guide to create this application on YouTube.
